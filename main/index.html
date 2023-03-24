@@ -1,0 +1,65 @@
+<!DOCTYPE html> 
+<html>
+  <head>
+    <title>welcome to tradersamz' coding portfolio</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="myscript.js"></script>
+  </head>
+  <body>
+    <header>
+      <h1>my coding portfolio</h1>
+    </header>
+    <nav>
+      <ul>
+        <li><a href="#start">start</a></li>
+      </ul>
+    </nav>
+    <main>
+      <section id="about-me" class="home-applications">
+        <h2><a href="#about-me" onclick="toggleVisibility('aboutme-content')">about me</a></h2>
+        <div id="aboutme-content" class="toggle-content">
+          <p>my info</p>
+        </div>
+      </section>
+      <section id="projects" class="home-applications">
+        <h2><a href="#projects" onclick="toggleVisibility('project-content')">projects</a></h2>
+        <div id="project-content" class="toggle-content">
+          <ul>
+            <li>project 1</li>
+            <li>project 2</li>
+            <li>project 3</li>
+          </ul>
+        </div>
+      </section>
+      <section id="contact" class="home-applications">
+        <h2><a href="#contact" onclick="toggleVisibility('contact-content')">contact</a></h2>
+        <div id="contact-content" class="toggle-content">
+          <p>twitter: tradersamz</p>
+          <p>github : tradersamz</p>
+        </div>
+      </section>
+    </main>
+    <footer>
+      <p>created from scratch (and with love) by tradersamz</p>
+    </footer>    
+    <script>
+      // Get all the section links
+      const sectionLinks = document.querySelectorAll('a[href^="#"]');
+        // Add click event listeners to each section link
+  sectionLinks.forEach(link => {
+    link.addEventListener('click', () => {
+      // Get the ID of the linked section
+      const sectionId = link.getAttribute('href').slice(1);
+
+      // Get the corresponding section element
+      const section = document.getElementById(sectionId);
+
+      // Toggle the 'show' class on the section's content
+      section.querySelector('.toggle-content').classList.toggle('show');
+    });
+  });
+</script>
+</body>
+</html>
