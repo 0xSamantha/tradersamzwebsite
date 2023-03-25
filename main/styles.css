@@ -5,8 +5,8 @@
 }
 
 header {
-  background-color: #333;
-  color: #fff;
+  background-color: #bf5dc1;
+  color: #897f7f;
   padding: 1rem;
   text-align: center;
 }
@@ -64,4 +64,14 @@ nav a:hover {
 
 .home-applications .toggle-content.show {
   display: block;
+}
+
+#clock {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  padding: 10px;
+  background-color: #333;
+  color: #fff;
+  font-size: 24px;
 }
